@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0)
 
 project(fcpp_test)
 
+set(CMAKE_CXX_STANDARD 14)
+
 file(GLOB FCPP_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/ext/fcpp/*.c)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ext/fcpp)
