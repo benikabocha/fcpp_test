@@ -193,7 +193,7 @@ ReturnCode macroid(struct Global *global, int *c)
   if (global->infile != NULL && global->infile->fp != NULL)
     global->recursion = 0;
   while (type[*c] == LET && (dp = lookid(global, *c)) != NULL) {
-    if(ret=expand(global, dp))
+    if((ret=expand(global, dp)))
       return(ret);
     *c = get(global);
   }
@@ -1112,7 +1112,7 @@ void domsg(struct Global *global,
 }
 
 void cerror(struct Global *global,
-            ErrorCode message,
+            int message,
             ...)        /* arguments    */
 {
   /*
